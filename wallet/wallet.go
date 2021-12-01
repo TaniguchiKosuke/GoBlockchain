@@ -1,7 +1,7 @@
 package wallet
 
 import (
-	"../utils"
+	"GoBlockchain/utils"
 	"crypto/ecdsa"
 	"crypto/elliptic"
 	"crypto/rand"

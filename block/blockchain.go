@@ -1,7 +1,7 @@
 package block
 
 import (
-	"../utils"
+	"GoBlockchain/utils"
 	"crypto/ecdsa"
 	"crypto/sha256"
 	"encoding/json"

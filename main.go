@@ -1,8 +1,8 @@
 package main
 
 import (
-	"./block"
-	"./wallet"
+	"GoBlockchain/block"
+	"GoBlockchain/wallet"
 	"fmt"
 	"log"
 )

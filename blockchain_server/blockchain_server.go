@@ -5,8 +5,8 @@ import (
 	"io"
 	"log"
 	"strconv"
-	"../block"
-	"../wallet"
+	"GoBlockchain/block"
+	"GoBlockchain/wallet"
 )
 
 var cache map[string]*block.Blockchain = make(map[string]*block.Blockchain)
