@@ -1,12 +1,12 @@
 package main
 
 import (
-	"net/http"
-	"io"
-	"log"
-	"strconv"
 	"GoBlockchain/block"
 	"GoBlockchain/wallet"
+	"io"
+	"log"
+	"net/http"
+	"strconv"
 )
 
 var cache map[string]*block.Blockchain = make(map[string]*block.Blockchain)
@@ -30,8 +30,8 @@ func (bcs *BlockchainServer) GetBlockchain() *block.Blockchain {
 		bc = block.NewBlockchain(minersWallet.BlockchainAddress(), bcs.Port())
 		cache["blockchain"] = bc
 		log.Printf("private_key %v", minersWallet.PrivateKeyStr())
-		log.Printf("public_key %v", minersWallet.PublicKeyStr())
-		log.Printf("blockchain_address %v", minersWallet.BlockchainAddress())
+		log.Printf("publick_key %v", minersWallet.PublicKeyStr())
+		log.Printf("blockchain_address %s", minersWallet.BlockchainAddress())
 	}
 	return bc
 }
@@ -45,6 +45,7 @@ func (bcs *BlockchainServer) GetChain(w http.ResponseWriter, req *http.Request) 
 		io.WriteString(w, string(m[:]))
 	default:
 		log.Printf("ERROR: Invalid HTTP Method")
+
 	}
 }
 
